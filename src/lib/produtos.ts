@@ -41,7 +41,7 @@ export const LOJA_PADRAO: Loja = {
   nome: "Vanuza Empreendimentos",
   frase: "Mais que moda, é você!",
   whatsapp: "5592991124806",
-  endereco: "Rua Louro, nº 02, Honório Roldão, Manaus",
+  endereco: "Rua Louro, nº 02, Honório Roldão, Presidente Figueiredo (AM)",
   instagram: null,
   horario: null,
 };

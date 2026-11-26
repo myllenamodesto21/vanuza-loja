@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s | Vanuza Empreendimentos",
   },
   description:
-    "Catálogo da Vanuza Empreendimentos: moda feminina, masculina e infantil, perfumaria, calçados e bolsas. Peça pelo WhatsApp. Honório Roldão, Manaus.",
+    "Catálogo da Vanuza Empreendimentos: moda feminina, masculina e infantil, perfumaria, calçados e bolsas. Peça pelo WhatsApp. Honório Roldão, Presidente Figueiredo (AM).",
   icons: { icon: "/favicon.png?v=3", apple: "/apple-icon-v3.png" },
   openGraph: {
     type: "website",
