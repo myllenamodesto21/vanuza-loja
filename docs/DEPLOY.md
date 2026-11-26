@@ -61,7 +61,7 @@ Daí em diante, ela fica logada; se sair ou trocar de navegador, entra com **Ent
 No SQL Editor:
 
 ```sql
-insert into public.administradores (email) values ('outro@email.com');
+insert into public.administradores (email, nome) values ('outro@email.com', 'Nome');
 ```
 
 E crie o usuário em Authentication > Users (passo 1.3).

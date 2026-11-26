@@ -4,11 +4,12 @@
 -- Quem pode gerenciar a loja. Só se muda por aqui (SQL Editor), nunca pela API.
 create table public.administradores (
   email text primary key check (email = lower(email)),
+  nome text not null default '',
   criado_em timestamptz not null default now()
 );
 alter table public.administradores enable row level security;
 
-insert into public.administradores (email) values ('vanuzamodesto72@gmail.com');
+insert into public.administradores (email, nome) values ('vanuzamodesto72@gmail.com', 'Vanuza');
 
 create or replace function public.eh_admin()
 returns boolean

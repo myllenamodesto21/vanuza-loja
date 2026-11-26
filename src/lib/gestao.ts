@@ -30,6 +30,14 @@ export async function souAdmin() {
   return data === true;
 }
 
+export async function meuNome() {
+  const sb = supabaseNavegador();
+  const { data: claims } = await sb.auth.getClaims();
+  const email = String(claims?.claims?.email ?? "").toLowerCase();
+  const { data } = await sb.from("administradores").select("nome").eq("email", email).maybeSingle();
+  return (data as { nome: string } | null)?.nome || "";
+}
+
 export async function listarTudo() {
   const sb = supabaseNavegador();
   const [produtos, categorias, loja] = await Promise.all([

@@ -3,7 +3,7 @@
 import { Loader2, LogOut } from "lucide-react";
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 
-import { listarTudo, souAdmin } from "@/lib/gestao";
+import { listarTudo, meuNome, souAdmin } from "@/lib/gestao";
 import { LOJA_PADRAO, type Categoria, type Loja, type Produto } from "@/lib/produtos";
 import { supabaseNavegador } from "@/lib/supabase/navegador";
 
@@ -13,6 +13,7 @@ type Gestao = {
   produtos: Produto[];
   categorias: Categoria[];
   loja: Loja;
+  nome: string;
   recarregar: () => Promise<void>;
   avisar: (texto: string, tipo?: Aviso["tipo"], acao?: Aviso["acao"]) => void;
   sair: () => Promise<void>;
@@ -26,6 +27,7 @@ export function ProvedorGestao({ children }: { children: React.ReactNode }) {
   const [categorias, setCategorias] = useState<Categoria[]>([]);
   const [loja, setLoja] = useState<Loja>(LOJA_PADRAO);
   const [avisos, setAvisos] = useState<Aviso[]>([]);
+  const [nome, setNome] = useState("");
 
   const recarregar = useCallback(async () => {
     const dados = await listarTudo();
@@ -38,7 +40,11 @@ export function ProvedorGestao({ children }: { children: React.ReactNode }) {
     (async () => {
       try {
         if (!(await souAdmin())) return setEstado("sem-acesso");
-        await recarregar();
+        const [n] = await Promise.all([meuNome(), recarregar()]);
+        setNome(n);
+        try {
+          localStorage.setItem("vanuza.nome", n);
+        } catch {}
         setEstado("pronto");
       } catch {
         setEstado("erro");
@@ -60,8 +66,8 @@ export function ProvedorGestao({ children }: { children: React.ReactNode }) {
   }, []);
 
   const valor = useMemo(
-    () => ({ produtos, categorias, loja, recarregar, avisar, sair }),
-    [produtos, categorias, loja, recarregar, avisar, sair],
+    () => ({ produtos, categorias, loja, nome, recarregar, avisar, sair }),
+    [produtos, categorias, loja, nome, recarregar, avisar, sair],
   );
 
   if (estado !== "pronto") {

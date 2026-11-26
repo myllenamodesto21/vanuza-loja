@@ -41,7 +41,7 @@ function CartaoDigital() {
 }
 
 export default function InicioGestao() {
-  const { produtos, sair, avisar } = useGestao();
+  const { produtos, sair, avisar, nome } = useGestao();
   const hoje = hojeISO();
   const aVenda = produtos.filter((p) => p.visivel && !p.esgotado);
   const promo = produtos.filter((p) => p.visivel && emPromocao(p, hoje));
@@ -80,7 +80,7 @@ export default function InicioGestao() {
         <img src="/logo.jpg" alt="" className="size-14 rounded-full ring-1 ring-rose/50" />
         <div>
           <p className="font-manuscrita text-2xl leading-none text-cobre">{saudacao()},</p>
-          <h1 className="font-titulo text-3xl font-semibold leading-tight">Vanuza!</h1>
+          <h1 className="font-titulo text-3xl font-semibold leading-tight">{nome || "Bem-vinda"}!</h1>
         </div>
         <Link href="/gestao/loja" className="ml-auto grid size-11 place-items-center rounded-full bg-white/70 ring-1 ring-linho" aria-label="Ajustes da loja">
           <Settings className="size-5" strokeWidth={1.6} />
