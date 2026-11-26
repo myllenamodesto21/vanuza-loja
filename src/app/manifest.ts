@@ -11,9 +11,9 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: "#f7f1ea",
     lang: "pt-BR",
     icons: [
-      { src: "/icone-192.png", sizes: "192x192", type: "image/png" },
-      { src: "/icone-512.png", sizes: "512x512", type: "image/png" },
-      { src: "/icone-maskable.png", sizes: "512x512", type: "image/png", purpose: "maskable" },
+      { src: "/icone-v2-192.png", sizes: "192x192", type: "image/png" },
+      { src: "/icone-v2-512.png", sizes: "512x512", type: "image/png" },
+      { src: "/icone-v2-maskable.png", sizes: "512x512", type: "image/png", purpose: "maskable" },
     ],
     shortcuts: [
       { name: "Promoções", url: "/promocoes" },
