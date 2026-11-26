@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+  --color-creme: #f7f1ea;
+  --color-areia: #efe3d6;
+  --color-linho: #e4d3c1;
+  --color-rose: #c99a7d;
+  --color-cobre: #a5694a;
+  --color-cobre-escuro: #86503a;
+  --color-chocolate: #3a2419;
+  --color-cacau: #6b4a3a;
+  --color-whatsapp: #25d366;
+  --color-promo: #b8473a;
+
+  --font-titulo: var(--fonte-titulo), Georgia, serif;
+  --font-sans: var(--fonte-corpo), system-ui, sans-serif;
+  --font-manuscrita: var(--fonte-manuscrita), cursive;
+
+  --animate-surgir: surgir 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  --animate-pulo: pulo 0.45s ease;
+  --animate-brilho: brilho 2.8s linear infinite;
+  --animate-subir: subir 0.32s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+
+  @keyframes surgir {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes subir {
+    from { transform: translateY(100%); }
+    to { transform: none; }
+  }
+  @keyframes pulo {
+    0%, 100% { transform: scale(1); }
+    40% { transform: scale(1.35); }
+  }
+  @keyframes brilho {
+    from { background-position: -200% 0; }
+    to { background-position: 200% 0; }
+  }
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-creme);
+  color: var(--color-chocolate);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  font-variant-numeric: lining-nums;
+}
+
+/* Gradiente rose gold, como o aro da logo */
+.ouro-rose {
+  background-image: linear-gradient(120deg, #8a5338 0%, #d9a98a 30%, #f3d6c2 48%, #c48b6b 62%, #8a5338 100%);
+}
+.texto-ouro-rose {
+  background-image: linear-gradient(120deg, #7d4a32 0%, #c48b6b 35%, #e6bfa5 50%, #a5694a 70%, #6e3f2a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.brilho-rose {
+  background-image: linear-gradient(100deg, transparent 30%, rgba(255, 255, 255, 0.55) 50%, transparent 70%);
+  background-size: 200% 100%;
+}
+
+.sem-rolagem {
+  scrollbar-width: none;
+}
+.sem-rolagem::-webkit-scrollbar {
+  display: none;
+}
+
+/* Espaço da barra de baixo do celular (com a área do iPhone) */
+.pb-barra {
+  padding-bottom: calc(5.5rem + env(safe-area-inset-bottom));
+}
+.seguro-baixo {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
