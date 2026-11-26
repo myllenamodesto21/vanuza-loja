@@ -50,7 +50,7 @@ Este projeto é separado do sistema da Move: **crie um projeto novo** no Supabas
 ## 3. Primeiro acesso da Vanuza (no celular dela)
 
 1. Abra `https://vanuza-loja.vercel.app/gestao`.
-2. Toque em **Receber código no e-mail**, confirme o e-mail e digite o código de 6 números.
+2. Toque em **Receber código no e-mail**, confirme o e-mail e digite o código de 6 ou 8 números.
 3. Na tela inicial aparece **Entrar com a digital**: toque em **Ativar agora** e use a digital ou o rosto.
 4. Adicione à tela de início (Ajustes da loja explica como no Android e no iPhone).
 

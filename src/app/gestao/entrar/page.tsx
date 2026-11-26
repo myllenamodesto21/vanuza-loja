@@ -168,25 +168,34 @@ export default function Entrar() {
         {etapa === "codigo" && (
           <div className="mt-8 space-y-3">
             <p className="text-cacau">
-              Mandamos um código de 6 números para <strong className="text-chocolate">{email}</strong>. Pode demorar um minutinho (olhe também o spam).
+              Mandamos um código de números para <strong className="text-chocolate">{email}</strong>. Pode demorar um minutinho (olhe também o spam).
             </p>
             <input
               ref={campoCodigo}
               type="text"
               inputMode="numeric"
               autoComplete="one-time-code"
-              maxLength={6}
+              maxLength={10}
               value={codigo}
               disabled={ocupado}
               onChange={(e) => {
-                const valor = e.target.value.replace(/\D/g, "").slice(0, 6);
+                // O Supabase manda 6 ou 8 números, conforme a configuração do projeto.
+                const valor = e.target.value.replace(/\D/g, "").slice(0, 10);
                 setCodigo(valor);
-                if (valor.length === 6) conferirCodigo(valor);
+                if (valor.length === 8) conferirCodigo(valor);
               }}
-              placeholder="000000"
-              className="h-16 w-full rounded-2xl bg-white text-center text-3xl tracking-[0.5em] ring-1 ring-linho outline-none focus:ring-2 focus:ring-rose"
-              aria-label="Código de 6 números"
+              placeholder="00000000"
+              className="h-16 w-full rounded-2xl bg-white text-center text-2xl tracking-[0.35em] ring-1 ring-linho outline-none focus:ring-2 focus:ring-rose"
+              aria-label="Código do e-mail"
             />
+            <button
+              type="button"
+              onClick={() => conferirCodigo(codigo)}
+              disabled={ocupado || codigo.length < 6}
+              className="flex h-14 w-full items-center justify-center rounded-full bg-chocolate text-creme transition active:scale-[0.98] disabled:opacity-40"
+            >
+              Entrar
+            </button>
             {ocupado && <Loader2 className="mx-auto size-6 animate-spin text-cobre" />}
             <div className="flex justify-center gap-5 pt-1 text-sm text-cacau">
               <button type="button" onClick={() => setEtapa("email")}>Trocar e-mail</button>
