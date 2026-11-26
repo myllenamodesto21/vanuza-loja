@@ -8,6 +8,7 @@ Este projeto é separado do sistema da Move: **crie um projeto novo** no Supabas
 1. Entre em <https://supabase.com/dashboard> e clique em **New project**.
    - Nome: `vanuza-loja`. Região: **South America (São Paulo)**. Crie uma senha do banco forte (guarde num gerenciador; o site não usa).
 2. **SQL Editor > New query**: cole o arquivo `supabase/migrations/20261126120000_loja.sql` inteiro e clique em **Run**.
+   Depois, numa query nova, rode também `supabase/migrations/20261126130000_permissoes_da_api.sql` (libera as tabelas para o site).
    Isso cria as tabelas, as categorias iniciais, as regras de segurança, a pasta de fotos e libera o e-mail da Vanuza na gestão.
 3. **Authentication > Users > Add user > Create new user**:
    - E-mail: `vanuzamodesto72@gmail.com`

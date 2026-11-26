@@ -18,7 +18,8 @@ export type DadosProduto = Omit<Produto, "id" | "criado_em" | "atualizado_em">;
 function falhou(erro: { message: string } | null, padrao: string): never | void {
   if (!erro) return;
   const msg = erro.message ?? "";
-  if (/row-level security|permission/i.test(msg)) throw new Error("Este acesso não pode mudar a loja.");
+  if (/row-level security/i.test(msg)) throw new Error("Este acesso não pode mudar a loja.");
+  if (/permission denied/i.test(msg)) throw new Error(`Falta liberar a tabela no Supabase (${msg}).`);
   if (/promocao_menor_que_preco/.test(msg)) throw new Error("O preço da promoção precisa ser menor que o preço normal.");
   if (/Failed to fetch|network/i.test(msg)) throw new Error("Sem internet agora. Tente de novo em instantes.");
   throw new Error(msg ? `${padrao} (${msg})` : padrao);
