@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
   description:
     "Catálogo da Vanuza Empreendimentos: moda feminina, masculina e infantil, perfumaria, calçados e bolsas. Peça pelo WhatsApp. Honório Roldão, Presidente Figueiredo (AM).",
-  icons: { icon: "/favicon.png?v=3", apple: "/apple-icon-v3.png" },
+  icons: { icon: "/favicon.png?v=4", apple: "/apple-icon-v4.png" },
   openGraph: {
     type: "website",
     locale: "pt_BR",
