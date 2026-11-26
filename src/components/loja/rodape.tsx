@@ -12,7 +12,7 @@ export function Rodape({ loja }: { loja: Loja }) {
       <div className="mx-auto max-w-6xl px-5 pb-28 pt-10 md:pb-12">
         <div className="flex flex-col items-center text-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.jpg" alt="Vanuza Empreendimentos" className="size-24 rounded-full ring-1 ring-rose/50" />
+          <img src="/marca.webp" alt="Vanuza Empreendimentos" className="size-28" />
           <p className="mt-3 font-manuscrita text-3xl text-cobre">{loja.frase}</p>
         </div>
         <div className="mx-auto mt-8 grid max-w-md gap-3 text-sm">

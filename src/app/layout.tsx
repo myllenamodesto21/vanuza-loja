@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     siteName: "Vanuza Empreendimentos",
-    images: [{ url: "/logo.jpg", width: 607, height: 607 }],
+    images: [{ url: "/compartilhar.jpg", width: 1200, height: 630 }],
   },
   appleWebApp: { capable: true, title: "Vanuza", statusBarStyle: "default" },
 };

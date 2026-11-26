@@ -20,7 +20,7 @@ export function FotoProduto({
     return (
       <div className={cn("grid place-items-center bg-gradient-to-br from-areia to-linho", className)}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/logo.jpg" alt="" className="w-1/2 rounded-full opacity-25 mix-blend-multiply" />
+        <img src="/marca.webp" alt="" className="w-1/2 opacity-30 mix-blend-multiply" />
       </div>
     );
   }

@@ -78,7 +78,7 @@ export function ProvedorGestao({ children }: { children: React.ReactNode }) {
         {estado === "carregando" ? (
           <div className="flex flex-col items-center gap-4">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo.jpg" alt="" className="size-24 animate-pulse rounded-full" />
+            <img src="/marca-pequena.webp" alt="" className="size-24 animate-pulse rounded-full" />
             <Loader2 className="size-6 animate-spin text-cobre" />
           </div>
         ) : (

@@ -77,7 +77,7 @@ export default function InicioGestao() {
     <div className="pb-barra px-4 pt-6" style={{ paddingTop: "calc(1.5rem + env(safe-area-inset-top))" }}>
       <div className="flex items-center gap-3">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/logo.jpg" alt="" className="size-14 rounded-full ring-1 ring-rose/50" />
+        <img src="/marca-pequena.webp" alt="" className="size-14 rounded-full" />
         <div>
           <p className="font-manuscrita text-2xl leading-none text-cobre">{saudacao()},</p>
           <h1 className="font-titulo text-3xl font-semibold leading-tight">{nome || "Bem-vinda"}!</h1>

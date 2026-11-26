@@ -102,7 +102,7 @@ export default function Entrar() {
 
       <div className="relative w-full max-w-sm text-center">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/logo.jpg" alt="Vanuza Empreendimentos" className="mx-auto size-36 rounded-full shadow-[0_18px_50px_-18px_rgba(134,80,58,0.6)]" />
+        <img src="/marca.webp" alt="Vanuza Empreendimentos" className="mx-auto size-36 rounded-full shadow-[0_18px_50px_-18px_rgba(134,80,58,0.6)]" />
         <p className="mt-6 font-manuscrita text-3xl text-cobre">{nome ? `Olá, ${nome}!` : "Olá!"}</p>
         <h1 className="font-titulo text-3xl font-semibold">Gestão da loja</h1>
 

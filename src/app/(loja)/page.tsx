@@ -29,7 +29,7 @@ export default async function Inicio() {
           <div className="pointer-events-none absolute -bottom-20 -left-10 size-56 rounded-full bg-white/70 blur-3xl" />
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/logo.jpg"
+            src="/marca.webp"
             alt="Vanuza Empreendimentos"
             className="relative mx-auto size-40 animate-surgir rounded-full shadow-[0_18px_50px_-18px_rgba(134,80,58,0.55)] md:mx-0 md:size-56"
           />

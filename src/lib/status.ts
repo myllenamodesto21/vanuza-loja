@@ -105,7 +105,7 @@ export async function gerarImagemStatus(produto: Produto, loja: Loja): Promise<F
   }
 
   // Logo.
-  const logo = await carregarImagem("/logo.jpg");
+  const logo = await carregarImagem("/marca.png");
   ctx.save();
   ctx.beginPath();
   ctx.arc(L / 2, 150, 92, 0, Math.PI * 2);
