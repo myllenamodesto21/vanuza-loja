@@ -12,7 +12,7 @@
   --color-whatsapp: #25d366;
   --color-promo: #b8473a;
 
-  --font-titulo: var(--fonte-titulo), Georgia, serif;
+  --font-titulo: var(--fonte-titulo), system-ui, sans-serif;
   --font-sans: var(--fonte-corpo), system-ui, sans-serif;
   --font-manuscrita: var(--fonte-manuscrita), cursive;
 

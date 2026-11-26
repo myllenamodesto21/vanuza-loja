@@ -72,7 +72,7 @@ function gradienteRose(ctx: CanvasRenderingContext2D, x: number, y: number, w: n
 }
 
 export async function gerarImagemStatus(produto: Produto, loja: Loja): Promise<File> {
-  const titulo = fonteDaVariavel("--fonte-titulo", "Georgia, serif");
+  const titulo = fonteDaVariavel("--fonte-titulo", "system-ui, sans-serif");
   const corpo = fonteDaVariavel("--fonte-corpo", "system-ui, sans-serif");
   const manuscrita = fonteDaVariavel("--fonte-manuscrita", "cursive");
   await Promise.all([

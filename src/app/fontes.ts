@@ -1,10 +1,10 @@
-import { Bodoni_Moda, Great_Vibes, Jost } from "next/font/google";
+import { Great_Vibes, Jost, Outfit } from "next/font/google";
 
-// Títulos em Bodoni (serifa de alto contraste, das revistas de moda, como o "VANUZA" da logo),
-// corpo limpo e o detalhe manuscrito. O eixo opsz deixa o traço certo em cada tamanho.
-export const fonteTitulo = Bodoni_Moda({
+// Títulos em Outfit (sem serifa, moderna e confortável de ler; a serifa fica só na logo),
+// corpo em Jost e o detalhe manuscrito em Great Vibes.
+export const fonteTitulo = Outfit({
   subsets: ["latin"],
-  axes: ["opsz"],
+  weight: ["400", "500", "600"],
   variable: "--fonte-titulo",
   display: "swap",
 });
