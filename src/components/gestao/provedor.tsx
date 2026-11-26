@@ -28,6 +28,7 @@ export function ProvedorGestao({ children }: { children: React.ReactNode }) {
   const [loja, setLoja] = useState<Loja>(LOJA_PADRAO);
   const [avisos, setAvisos] = useState<Aviso[]>([]);
   const [nome, setNome] = useState("");
+  const [detalhe, setDetalhe] = useState("");
 
   const recarregar = useCallback(async () => {
     const dados = await listarTudo();
@@ -46,7 +47,8 @@ export function ProvedorGestao({ children }: { children: React.ReactNode }) {
           localStorage.setItem("vanuza.nome", n);
         } catch {}
         setEstado("pronto");
-      } catch {
+      } catch (e) {
+        setDetalhe(e instanceof Error ? e.message : String(e));
         setEstado("erro");
       }
     })();
@@ -82,8 +84,9 @@ export function ProvedorGestao({ children }: { children: React.ReactNode }) {
         ) : (
           <div className="max-w-xs space-y-4">
             <p className="font-titulo text-2xl">
-              {estado === "sem-acesso" ? "Este acesso não é da gestão da loja." : "Não deu para carregar. Confira a internet."}
+              {estado === "sem-acesso" ? "Este acesso não é da gestão da loja." : "Não deu para carregar a gestão."}
             </p>
+            {detalhe && <p className="rounded-2xl bg-areia p-3 text-left font-mono text-xs break-words text-cacau">{detalhe}</p>}
             <div className="flex justify-center gap-2">
               {estado === "erro" && (
                 <button type="button" onClick={() => window.location.reload()} className="h-12 rounded-full bg-chocolate px-5 text-creme">

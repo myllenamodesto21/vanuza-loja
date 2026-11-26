@@ -21,7 +21,7 @@ function falhou(erro: { message: string } | null, padrao: string): never | void 
   if (/row-level security|permission/i.test(msg)) throw new Error("Este acesso não pode mudar a loja.");
   if (/promocao_menor_que_preco/.test(msg)) throw new Error("O preço da promoção precisa ser menor que o preço normal.");
   if (/Failed to fetch|network/i.test(msg)) throw new Error("Sem internet agora. Tente de novo em instantes.");
-  throw new Error(msg && !/[a-z_]+\.[a-z_]+/.test(msg) ? msg : padrao);
+  throw new Error(msg ? `${padrao} (${msg})` : padrao);
 }
 
 export async function souAdmin() {
@@ -46,6 +46,8 @@ export async function listarTudo() {
     sb.from("loja").select("nome, frase, whatsapp, endereco, instagram, horario").eq("id", 1).maybeSingle(),
   ]);
   falhou(produtos.error, "Não deu para carregar os produtos.");
+  falhou(categorias.error, "Não deu para carregar as categorias.");
+  falhou(loja.error, "Não deu para carregar os dados da loja.");
   return {
     produtos: (produtos.data ?? []).map((p: Record<string, unknown>) => normalizarProduto(p)),
     categorias: (categorias.data ?? []) as Categoria[],
