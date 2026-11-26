@@ -80,7 +80,7 @@ export function AtivarDigital({ aoAtivar, compacto = false }: { aoAtivar?: () =>
           {feito ? <Check className="size-7 text-chocolate" /> : <Fingerprint className="size-8 text-chocolate" strokeWidth={1.5} />}
         </div>
         <div>
-          <p className="font-titulo text-xl font-semibold">Entrar com a digital</p>
+          <p className="font-titulo text-xl font-medium">Entrar com a digital</p>
           <p className="mt-0.5 text-sm text-creme/80">
             Cadastre este celular uma vez e nunca mais precisa de código nem senha.
           </p>

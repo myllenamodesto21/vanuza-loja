@@ -34,8 +34,8 @@ export default async function Inicio() {
             className="relative mx-auto size-40 animate-surgir rounded-full shadow-[0_18px_50px_-18px_rgba(134,80,58,0.55)] md:mx-0 md:size-56"
           />
           <div className="relative mt-5 text-center md:mt-0 md:text-left">
-            <p className="font-manuscrita text-[34px] leading-none text-cobre">{loja.frase}</p>
-            <h1 className="mt-2 font-titulo text-[26px] font-semibold leading-tight md:text-4xl">
+            <p className="font-manuscrita text-[34px] leading-tight text-cobre">{loja.frase}</p>
+            <h1 className="mt-2 font-titulo text-[26px] font-medium leading-tight md:text-4xl">
               Moda feminina, masculina e infantil, perfumaria, calçados e bolsas
             </h1>
             <p className="mt-2 text-sm text-cacau">Escolha aqui e peça direto pelo WhatsApp.</p>
@@ -69,7 +69,7 @@ export default async function Inicio() {
             <div className="relative mb-4 flex items-end justify-between">
               <div>
                 <p className="font-manuscrita text-xl leading-none text-rose">aproveite</p>
-                <h2 className="font-titulo text-[28px] font-semibold">Promoções</h2>
+                <h2 className="font-titulo text-[28px] font-medium">Promoções</h2>
               </div>
               <Link href="/promocoes" className="pb-1.5 text-sm text-rose">Ver todas</Link>
             </div>

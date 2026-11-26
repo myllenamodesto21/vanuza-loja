@@ -66,7 +66,7 @@ export default async function PaginaProduto({ params }: Props) {
               {categoria.nome}
             </Link>
           )}
-          <h1 className="mt-1.5 font-titulo text-[32px] font-semibold leading-[1.1]">{produto.nome}</h1>
+          <h1 className="mt-1.5 font-titulo text-[32px] font-medium leading-[1.1]">{produto.nome}</h1>
           <div className="mt-3">
             <Preco produto={produto} grande />
             {emPromocao(produto) && produto.promocao_ate && (

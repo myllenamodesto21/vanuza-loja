@@ -104,7 +104,7 @@ export default function Entrar() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/marca.webp" alt="Vanuza Empreendimentos" className="mx-auto size-36 rounded-full shadow-[0_18px_50px_-18px_rgba(134,80,58,0.6)]" />
         <p className="mt-6 font-manuscrita text-3xl text-cobre">{nome ? `Olá, ${nome}!` : "Olá!"}</p>
-        <h1 className="font-titulo text-3xl font-semibold">Gestão da loja</h1>
+        <h1 className="font-titulo text-3xl font-medium">Gestão da loja</h1>
 
         {etapa === "inicio" && (
           <div className="mt-8 space-y-3">

@@ -31,7 +31,7 @@ export function Cabecalho() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/marca-pequena.webp" alt="" className="size-10 rounded-full" />
           <span className="leading-none">
-            <span className="block font-titulo text-[22px] font-semibold tracking-[0.12em] texto-ouro-rose">VANUZA</span>
+            <span className="block font-titulo text-[22px] font-medium tracking-[0.12em] texto-ouro-rose">VANUZA</span>
             <span className="block text-[8.5px] tracking-[0.32em] text-cacau">EMPREENDIMENTOS</span>
           </span>
         </Link>

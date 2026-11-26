@@ -146,7 +146,7 @@ export function FormularioProduto({ produto }: { produto?: Produto }) {
           <Check className="size-12 text-chocolate" strokeWidth={2.2} />
         </div>
         <p className="mt-5 font-manuscrita text-3xl text-cobre">que lindo!</p>
-        <h1 className="font-titulo text-3xl font-semibold">Produto cadastrado</h1>
+        <h1 className="font-titulo text-3xl font-medium">Produto cadastrado</h1>
         <p className="mt-1 text-cacau">Já está aparecendo na loja.</p>
         <div className="mt-8 grid w-full max-w-xs gap-3">
           <Link href={`/gestao/status?ids=${salvo}`} className="flex h-14 items-center justify-center gap-2 rounded-full bg-chocolate text-creme">
@@ -301,7 +301,7 @@ export function FormularioProduto({ produto }: { produto?: Produto }) {
           {controlarEstoque ? (
             <div className="mt-3 flex items-center justify-center gap-5 border-t border-linho/70 pt-3">
               <button type="button" onClick={() => setQuantidade((q) => Math.max(0, q - 1))} className="grid size-12 place-items-center rounded-full bg-areia text-2xl">−</button>
-              <span className="w-16 text-center font-titulo text-4xl font-semibold">{quantidade}</span>
+              <span className="w-16 text-center font-titulo text-4xl font-medium">{quantidade}</span>
               <button type="button" onClick={() => setQuantidade((q) => q + 1)} className="grid size-12 place-items-center rounded-full bg-areia text-2xl">+</button>
             </div>
           ) : (

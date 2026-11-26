@@ -17,7 +17,7 @@ export default async function Promocoes() {
     <div className="pb-barra px-4 pt-2 md:pb-0">
       <div className="mb-5 mt-2">
         <p className="font-manuscrita text-2xl leading-none text-cobre">aproveite enquanto dura</p>
-        <h1 className="font-titulo text-4xl font-semibold">Promoções</h1>
+        <h1 className="font-titulo text-4xl font-medium">Promoções</h1>
       </div>
       {emPromo.length ? (
         <ListaFiltrada produtos={emPromo} categorias={comPromo.length > 1 ? comPromo : undefined} />

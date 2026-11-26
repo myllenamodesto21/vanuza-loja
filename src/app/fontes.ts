@@ -1,9 +1,10 @@
-import { Cormorant_Garamond, Great_Vibes, Jost } from "next/font/google";
+import { Bodoni_Moda, Great_Vibes, Jost } from "next/font/google";
 
-// Títulos serifados (como o "VANUZA" da logo), corpo limpo e o detalhe manuscrito.
-export const fonteTitulo = Cormorant_Garamond({
+// Títulos em Bodoni (serifa de alto contraste, das revistas de moda, como o "VANUZA" da logo),
+// corpo limpo e o detalhe manuscrito. O eixo opsz deixa o traço certo em cada tamanho.
+export const fonteTitulo = Bodoni_Moda({
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  axes: ["opsz"],
   variable: "--fonte-titulo",
   display: "swap",
 });

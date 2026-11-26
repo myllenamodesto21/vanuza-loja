@@ -76,7 +76,7 @@ export async function gerarImagemStatus(produto: Produto, loja: Loja): Promise<F
   const corpo = fonteDaVariavel("--fonte-corpo", "system-ui, sans-serif");
   const manuscrita = fonteDaVariavel("--fonte-manuscrita", "cursive");
   await Promise.all([
-    document.fonts.load(`600 80px ${titulo}`),
+    document.fonts.load(`500 64px ${titulo}`),
     document.fonts.load(`500 40px ${corpo}`),
     document.fonts.load(`400 60px ${manuscrita}`),
   ]).catch(() => {});
@@ -161,7 +161,7 @@ export async function gerarImagemStatus(produto: Produto, loja: Loja): Promise<F
   // Nome.
   ctx.textAlign = "center";
   ctx.fillStyle = "#3a2419";
-  ctx.font = `600 66px ${titulo}`;
+  ctx.font = `500 64px ${titulo}`;
   const linhas = quebrarLinhas(ctx, produto.nome, 900, 2);
   let y = 1368;
   linhas.forEach((linha, i) => ctx.fillText(linha, L / 2, y + i * 70));

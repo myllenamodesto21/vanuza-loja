@@ -36,7 +36,7 @@ export function GavetaSacola({ whatsapp }: { whatsapp: string }) {
       <div className="absolute inset-x-0 bottom-0 flex max-h-[88dvh] animate-subir flex-col rounded-t-[28px] bg-creme shadow-2xl md:inset-y-0 md:left-auto md:right-0 md:max-h-none md:w-[420px] md:rounded-none md:rounded-l-[28px]">
         <div className="mx-auto mt-2.5 h-1.5 w-12 rounded-full bg-linho md:hidden" />
         <div className="flex items-center justify-between px-5 pb-3 pt-3 md:pt-6">
-          <h2 className="font-titulo text-2xl font-semibold">Sua sacola</h2>
+          <h2 className="font-titulo text-2xl font-medium">Sua sacola</h2>
           <button type="button" onClick={fechar} className="grid size-10 place-items-center rounded-full hover:bg-areia" aria-label="Fechar">
             <X className="size-5" />
           </button>

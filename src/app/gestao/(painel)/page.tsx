@@ -80,7 +80,7 @@ export default function InicioGestao() {
         <img src="/marca-pequena.webp" alt="" className="size-14 rounded-full" />
         <div>
           <p className="font-manuscrita text-2xl leading-none text-cobre">{saudacao()},</p>
-          <h1 className="font-titulo text-3xl font-semibold leading-tight">{nome || "Bem-vinda"}!</h1>
+          <h1 className="font-titulo text-3xl font-medium leading-tight">{nome || "Bem-vinda"}!</h1>
         </div>
         <Link href="/gestao/loja" className="ml-auto grid size-11 place-items-center rounded-full bg-white/70 ring-1 ring-linho" aria-label="Ajustes da loja">
           <Settings className="size-5" strokeWidth={1.6} />
@@ -97,7 +97,7 @@ export default function InicioGestao() {
         {numeros.map(({ nome, valor, Icone, href }) => (
           <Link key={nome} href={href} className="rounded-3xl bg-white/70 p-4 ring-1 ring-linho/60 transition active:scale-[0.97]">
             <Icone className="size-5 text-cobre" strokeWidth={1.6} />
-            <p className="mt-2 font-titulo text-4xl font-semibold leading-none">{valor}</p>
+            <p className="mt-2 font-titulo text-4xl font-medium leading-none">{valor}</p>
             <p className="mt-1 text-sm text-cacau">{nome}</p>
           </Link>
         ))}

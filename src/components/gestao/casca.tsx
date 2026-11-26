@@ -73,7 +73,7 @@ export function TopoGestao({ titulo, voltar, direita }: { titulo: string; voltar
         // eslint-disable-next-line @next/next/no-img-element
         <img src="/marca-pequena.webp" alt="" className="size-9 rounded-full" />
       )}
-      <h1 className="min-w-0 flex-1 truncate font-titulo text-2xl font-semibold">{titulo}</h1>
+      <h1 className="min-w-0 flex-1 truncate font-titulo text-2xl font-medium">{titulo}</h1>
       {direita}
     </header>
   );
